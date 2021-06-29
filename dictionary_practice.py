@@ -7,6 +7,39 @@ food_prices = {"chicken": 1.59,
                 "cheese": 1.00, 
                 "milk": 2.00}
 
+def total_price(Dict, item1, item2):
+    sum = Dict[item1] + Dict[item2]
+    print(" The total price of " + item1 + " and " + item2 + " is $", str(sum))
+total_price(food_prices, "beef", "cheese")
+
+
+# OR
+
+def total_price(item1, item2):
+    price1 = food_prices[item1]
+    price2 = food_prices[item2]
+    return price1 + price2
+
+print("Price of cheese and beef: $" + str(total_price("beef", "cheese")))
+print(type(total_price("milk", "cheese")))
+#type let's you know what type it is ex: float, str, int, etc
+#to make both the same type, wrap one of the values around something like str as shown above
+
+# STEP 3 from lab 4 
+def price_difference(item1, item2):
+    price1 = food_prices[item1]
+    price2 = food_prices[item2]
+    difference = price1 - price2
+
+    if price2 > price1:
+        difference = price2 - price1
+    else:
+        difference = price1 - price2
+
+
+    return difference
+print("The difference between beef and cheese: $" + str(price_difference("cheese", "beef")))
+
 # STEP 3
 nctdream_age = {"Mark Lee": 21,
             "Park Jisung": 19,
