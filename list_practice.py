@@ -26,3 +26,19 @@ del list_of_cities[3]
 list_of_cities.pop(0)
 list_of_cities.remove('denver')
 print(list_of_cities)
+
+
+city_names = [
+"Oakland","Seattle", 
+"Atlanta", "New York City", 
+"Memphis", "Miami", 
+"Los Angelos", "New Orleans"]
+
+def printCityNames(cities_list):
+    counter = 0
+    while counter < len(cities_list):
+        print(cities_list[counter])
+        counter += 1
+    return "completed"
+print(city_names[0], city_names[1], city_names[2])
+printCityNames(city_names)
